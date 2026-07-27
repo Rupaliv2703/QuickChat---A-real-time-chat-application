@@ -7,8 +7,8 @@ const Home = () => {
   const [selectedUser, setSelectedUser] = useState(false)
 
   return (
-    <div className="bg-amber-950 min-h-screen">
-     <div className='bg-amber-900'>
+    <div className="">
+     <div className=''>
       <Sidebar/>
       <ChatContainer/>
       <RightSidebar/>
