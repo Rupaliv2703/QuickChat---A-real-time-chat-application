@@ -9,7 +9,7 @@ import chatbg from './assets/chatbg.png'
 const App = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      className=" bg-cover "
       style={{ backgroundImage: `url(${chatbg})` }}
     >
       <Routes>
