@@ -1,12 +1,12 @@
+
 import React from 'react'
 
 const About = () => {
   return (
     <div>
-      <h1>about pAGE</h1>
+      about us
     </div>
   )
 }
 
 export default About
-

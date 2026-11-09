@@ -53,7 +53,7 @@ useEffect(()=>{
    
   {/* BOTTOM AREA */}
   <div className='absolute bottom-0 left-0 right-0 flex items-center gap-3 p-3'>
-<div clasName='flex-1 flex items-center bg-gray-100/10 px-3 rounded-full'>
+<div className='flex-1 flex items-center bg-gray-100/10 px-3 rounded-full'>
 <input type="text" placeholder="send a message..."
  className='flex-1 text-sm p-3 border-none rounded-lg outline-none ' />
 <input type="file" id="image" accept="image/png , image/jpeg" hidden />

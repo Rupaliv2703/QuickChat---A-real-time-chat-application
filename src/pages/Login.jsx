@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useContext } from 'react'
 import assets from '../assets/assets'
+import { AuthContext } from '../../context/AuthContext'
+
 const Login = () => {
   const [currState, setcurrState] = useState("Sign up")
  const [fullName, setfullName] = useState("")
@@ -9,12 +11,18 @@ const Login = () => {
  const [bio, setbio] = useState("")
  const [isDataSubmitted, setisDataSubmitted] = useState(false);
 
-const onsubmitHandler = (e) => {
+const {login}= useContext(AuthContext) ;
+
+const onSubmitHandler = (e) => {
   e.preventDefault();
 if (currState === "Sign up" && !isDataSubmitted) {
   setisDataSubmitted(true);
   return ;
-}}
+}
+login (currState == "Sign up" ? 'signup' : 'login',{
+  fullName , email, password , bio
+})
+}
 
   return (
     <div className='min-h-screen bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl'>
@@ -23,7 +31,7 @@ if (currState === "Sign up" && !isDataSubmitted) {
       <img src={assets.logo_big} alt='' className='w-[40%]'/>
 
       {/* RIGHT */}
-      <form onSubmit={onsubmitHandler}
+      <form onSubmit={onSubmitHandler}
       className='border-2 bg-white/8 text-white border-gray-500 p-6 flex flex-col
       gap-6 rounded-lg shadow-lg'>
         <h2 className='font-medium text-slate-600 text-2xl flex justify-between items-center'> 
